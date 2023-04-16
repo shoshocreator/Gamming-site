@@ -1,0 +1,194 @@
+:root {
+  --btn-border: #2286ea;
+  --main-color: #ffffff;
+  --body-color: #272b30;
+  --dark-color: #1c1e22;
+}
+body {
+  background-color: var(--body-color);
+}
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+/* navbar style */
+.navbar {
+  border-bottom: 2px solid rgb(49, 47, 47);
+  background-color: var(--body-color) !important;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  .logoPic {
+    cursor: pointer;
+    width: 70px;
+  }
+  /* Btns */
+  .loginBtn {
+    color: rgb(89, 85, 85);
+
+    &:hover {
+      color: rgb(175, 162, 162);
+    }
+  }
+
+  .joinBtn {
+    border: 1px solid var(--btn-border);
+    border-radius: 7px;
+
+    color: var(--btn-border);
+    border-radius: 5px;
+    background-color: inherit;
+  }
+}
+.specialNav {
+  margin: 0 5px;
+  color: #ffffff;
+  &:hover {
+    color: #ffffff !important;
+  }
+}
+
+// login style
+
+.gamePic {
+  width: 108px;
+  height: 72px;
+}
+// loginform
+
+.loginSec {
+  // height: 440px;
+  .login-form {
+    height: 440px;
+
+    .login-img {
+      .imgBack {
+        width: 100%;
+        height: 100%;
+        background-image: url("../assets/gaming.jpg");
+        background-size: cover;
+        background-position: center center;
+      }
+    }
+
+    .login-info {
+      height: 100%;
+      width: 50%;
+    }
+  }
+}
+
+.loginForm {
+  .loginBtForm {
+    border: 1px solid rgb(24, 23, 23);
+    background-color: #212325;
+  }
+}
+
+// common in join and login
+.line,
+.loginForm {
+  border-bottom: 1px solid rgb(50, 49, 49);
+}
+
+// Join section
+.joinSec {
+  border-bottom: 0;
+  .name {
+    border: none;
+    input {
+      border-radius: 5px;
+      width: calc(50% - 10px);
+    }
+  }
+  input,
+  .name input {
+    background-color: var(--dark-color);
+    border: 0px solid rgba(0, 0, 0, 0.6);
+  }
+}
+
+.line {
+  width: 80%;
+}
+// ! Home page
+
+.home-pic {
+  // height: calc(50vh - 20px);
+  background-repeat: no-repeat;
+  background-color: #1c1e22;
+  background-position: top;
+  background-size: contain;
+  // margin-top: 20px;
+
+  h1,
+  h2 {
+    padding: 3rem 0 0.25rem 0;
+
+    color: rgb(108, 117, 125);
+  }
+}
+
+.homeDivider {
+  border-bottom: 2px solid black;
+  width: 100%;
+}
+
+.browser-game {
+  border: 1px solid #6c757d !important;
+  border-radius: 7px;
+  &:hover {
+    border: none;
+  }
+}
+
+.homeLine {
+  background-color: #32383e;
+}
+.bottomHome {
+  padding: 2rem 1rem;
+}
+
+.badge {
+  padding: 0 2px !important;
+  font-size: 16px;
+}
+
+// single cart
+.singleCart {
+  overflow: hidden;
+  padding: 8px;
+  .freeBtn {
+    padding: 10px 15px;
+    border: #343a40;
+    border-radius: 10px;
+  }
+  .playBtn {
+    width: 80%;
+  }
+}
+
+.SingleGame {
+  // margin-top: 50px;
+  padding: 70px;
+  .single-pic {
+    transition: 0.5s;
+    background-color: red;
+    &:hover {
+      opacity: 0;
+    }
+  }
+}
+
+.picScroll {
+  // width: 855.987px;
+  width: 100%;
+}
+.addition {
+  color: rgb(170, 170, 170);
+}

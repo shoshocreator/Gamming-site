@@ -1,0 +1,174 @@
+:root {
+  --btn-border: #2286ea;
+  --main-color: #ffffff;
+  --body-color: #272b30;
+  --dark-color: #1c1e22;
+}
+
+body {
+  background-color: var(--body-color);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* navbar style */
+.navbar {
+  border-bottom: 2px solid rgb(49, 47, 47);
+  background-color: var(--body-color) !important;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* Btns */
+}
+.navbar .logoPic {
+  cursor: pointer;
+  width: 70px;
+}
+.navbar .loginBtn {
+  color: rgb(89, 85, 85);
+}
+.navbar .loginBtn:hover {
+  color: rgb(175, 162, 162);
+}
+.navbar .joinBtn {
+  border: 1px solid var(--btn-border);
+  border-radius: 7px;
+  color: var(--btn-border);
+  border-radius: 5px;
+  background-color: inherit;
+}
+
+.specialNav {
+  margin: 0 5px;
+  color: #ffffff;
+}
+.specialNav:hover {
+  color: #ffffff !important;
+}
+
+.gamePic {
+  width: 108px;
+  height: 72px;
+}
+
+.loginSec .login-form {
+  height: 440px;
+}
+.loginSec .login-form .login-img .imgBack {
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/gaming.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+.loginSec .login-form .login-info {
+  height: 100%;
+  width: 50%;
+}
+
+.loginForm .loginBtForm {
+  border: 1px solid rgb(24, 23, 23);
+  background-color: #212325;
+}
+
+.line,
+.loginForm {
+  border-bottom: 1px solid rgb(50, 49, 49);
+}
+
+.joinSec {
+  border-bottom: 0;
+}
+.joinSec .name {
+  border: none;
+}
+.joinSec .name input {
+  border-radius: 5px;
+  width: calc(50% - 10px);
+}
+.joinSec input,
+.joinSec .name input {
+  background-color: var(--dark-color);
+  border: 0px solid rgba(0, 0, 0, 0.6);
+}
+
+.line {
+  width: 80%;
+}
+
+.home-pic {
+  background-repeat: no-repeat;
+  background-color: #1c1e22;
+  background-position: top;
+  background-size: contain;
+}
+.home-pic h1,
+.home-pic h2 {
+  padding: 3rem 0 0.25rem 0;
+  color: rgb(108, 117, 125);
+}
+
+.homeDivider {
+  border-bottom: 2px solid black;
+  width: 100%;
+}
+
+.browser-game {
+  border: 1px solid #6c757d !important;
+  border-radius: 7px;
+}
+.browser-game:hover {
+  border: none;
+}
+
+.homeLine {
+  background-color: #32383e;
+}
+
+.bottomHome {
+  padding: 2rem 1rem;
+}
+
+.badge {
+  padding: 0 2px !important;
+  font-size: 16px;
+}
+
+.singleCart {
+  overflow: hidden;
+  padding: 8px;
+}
+.singleCart .freeBtn {
+  padding: 10px 15px;
+  border: #343a40;
+  border-radius: 10px;
+}
+.singleCart .playBtn {
+  width: 80%;
+}
+
+.SingleGame {
+  padding: 70px;
+}
+.SingleGame .single-pic {
+  transition: 0.5s;
+}
+.SingleGame .single-pic:hover {
+  opacity: 0;
+}
+
+.picScroll {
+  width: 100%;
+}
+
+.addition {
+  color: rgb(170, 170, 170);
+} /*# sourceMappingURL=style.css.map */
