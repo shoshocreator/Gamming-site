@@ -7,7 +7,7 @@ import Login from "./Components/Login/Login";
 import PlatForm from "./Components/PlatForm/PlatForm";
 import SingleGame from "./Components/SingleGame/SingleGame";
 import SortBy from "./Components/SortBy/SortBy";
-import ChangingPage from "./Components/changingPage/changingPage";
+import ChangingPage from "./Components/ChangingPage/ChangingPage";
 
 export {
   JoinFree,
