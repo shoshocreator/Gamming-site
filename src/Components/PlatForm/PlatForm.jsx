@@ -2,22 +2,20 @@ import React, { useContext, useEffect, useState } from "react";
 
 import { ProjectContext } from "../ProjectContext/ProjectContext";
 import TheGame from "../TheGame/TheGame";
+import { useParams } from "react-router-dom";
 
-const All = () => {
+const PlatForm = () => {
+  let params = useParams();
+  console.log(params);
+
   let [allData, setAllData] = useState(null);
-  let { GetAll, Loading, setLoading, GetSingleGame } =
+  let { PlatFormData, Loading, setLoading, GetPlatForm, GetSingleGame } =
     useContext(ProjectContext);
 
-  async function GettingAll() {
-    let result = await GetAll();
-    if (result?.status == 200) {
-      setLoading(false);
-      setAllData(result?.data);
-    }
-  }
   useEffect(() => {
-    GettingAll();
-  }, []);
+    GetPlatForm(params.platform);
+  }, [params.platform]);
+
   if (Loading) {
     return (
       <h1
@@ -28,11 +26,12 @@ const All = () => {
       </h1>
     );
   }
+
   return (
     <section className="container text-white">
-      <TheGame allData={allData} GetSingleGame={GetSingleGame} />
+      <TheGame allData={PlatFormData} GetSingleGame={GetSingleGame} />
     </section>
   );
 };
 
-export default All;
+export default PlatForm;

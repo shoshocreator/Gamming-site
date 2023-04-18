@@ -1,8 +1,20 @@
-import { Login, JoinFree, Layout, All, Home, SingleGame } from "./Pages";
+import {
+  Login,
+  JoinFree,
+  Layout,
+  All,
+  Home,
+  SingleGame,
+  PlatForm,
+  SortBy,
+  Categories,
+} from "./Pages";
 import ReactDOM from "react-dom/client";
-
-import React from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import React, { useState } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Protector from "./Components/Protector/Protector";
 
 // <All/
 
@@ -14,7 +26,11 @@ const App = () => {
       children: [
         {
           index: true,
-          element: <Layout />,
+          element: (
+            <Protector>
+              <Home />
+            </Protector>
+          ),
         },
         {
           path: "logIn",
@@ -26,18 +42,48 @@ const App = () => {
         },
         {
           path: "all",
-          element: <All />,
+          element: (
+            <Protector>
+              <All />
+            </Protector>
+          ),
         },
         {
-          path: "home",
-          element: <Home />,
+          path: "singlegame/:id",
+          element: (
+            <Protector>
+              <SingleGame />
+            </Protector>
+          ),
         },
         {
-          path: "all/SingleGame",
-          element: <SingleGame />,
+          path: "/Platforms/:platform",
+          element: (
+            <Protector>
+              <PlatForm />
+            </Protector>
+          ),
         },
-        // { path: "Login", element: <Login sveUserData={sveUserData} /> },
-        // { path: "*", element: <NotFound /> },
+        {
+          path: "/sortBy/:sortBy",
+          element: (
+            <Protector>
+              <SortBy />
+            </Protector>
+          ),
+        },
+        {
+          path: "/categories/:cat",
+          element: (
+            <Protector>
+              <Categories />
+            </Protector>
+          ),
+        },
+        {
+          path: "*",
+          element: <h1 className="text-light m-5">page not exist</h1>,
+        },
       ],
     },
   ]);
